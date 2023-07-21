@@ -16,14 +16,7 @@
 </table>
 
 <div class="breadcrumbs">
-  <span class="breadcrumbs__item">
-    <span (click)="openFolder(currentFolder + 'USB')">
-      USB
-    </span>
-  </span>
-  <span class="breadcrumbs__item"
-    *ngFor="let folder of currentFolder.split('/')"
-    *ngIf="folder == 'USB'">
+  <span class="breadcrumbs__item" *ngFor="let folder of currentFolder.split('/')">
     <span (click)="openFolder(currentFolder.split(folder)[0] + folder)">
       {{ folder }}
     </span>
