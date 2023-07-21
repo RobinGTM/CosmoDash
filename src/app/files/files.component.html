@@ -23,7 +23,7 @@
   </span>
   <span class="breadcrumbs__item"
     *ngFor="let folder of currentFolder.split('/')"
-    *ngIf="folder == 'USB'">
+    *ngIf="folder != 'USB'">
     <span (click)="openFolder(currentFolder.split(folder)[0] + folder)">
       {{ folder }}
     </span>
